@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jochebed Godzi Portfolio</title>
+
+<style>
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f4f4f4;
+}
+
+/* NAV */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #222;
+    padding: 15px;
+    text-align: center;
+}
+
+.navbar a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #00bfff;
+}
+
+/* SECTIONS */
+section {
+    padding: 80px 20px;
+    min-height: 100vh;
+}
+
+/* HOME */
+#home {
+    background: #333;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* PROJECT GRID */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* BUTTONS */
+button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* CALCULATOR */
+.calc {
+    background: black;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    width: 220px;
+}
+
+.calc input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: right;
+    font-size: 18px;
+}
+
+.btn-num { background: #444; color: white; }
+.btn-op { background: orange; color: white; }
+.btn-eq { background: green; color: white; }
+.btn-clear { background: red; color: white; }
+
+/* TODO */
+.todo input {
+    padding: 10px;
+    width: 60%;
+}
+
+.todo li {
+    margin: 5px 0;
+    background: #ddd;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<!-- HOME -->
+<section id="home">
+    <h1>Hi, I'm Jochebed Godzi</h1>
+    <p>Web Developer Student</p>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h1>About Me</h1>
+
+    <p>
+        Hi , my name is <b>Jochebed Godzi</b>. I am a passionate student learning 
+        how to build modern and interactive websites.
+    </p>
+
+    <p>
+        I am currently studying <b>HTML</b>, <b>CSS</b>, and <b>JavaScript</b>, 
+        and I enjoy turning ideas into real digital projects that people can use.
+    </p>
+
+    <p>
+        My journey in web development started with curiosity, and now I am focused on 
+        improving my skills every day by building projects like calculators, to-do lists, 
+        and full portfolio websites.
+    </p>
+
+    <p>
+     <b>What I enjoy:</b> Solving problems, designing web pages, and learning new technologies.
+    </p>
+
+    <p>
+     <b>My goal:</b> To become a professional web developer and create impactful digital solutions.
+    </p>
+
+    <a href="#projects" class="btn">View My Projects</a>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<h1>My Projects</h1>
+
+<div class="projects">
+
+<!-- CALCULATOR -->
+<div class="card">
+<h3>Calculator App</h3>
+
+<div class="calc">
+<input id="display" disabled>
+
+<br>
+
+<button class="btn-num" onclick="press('1')">1</button>
+<button class="btn-num" onclick="press('2')">2</button>
+<button class="btn-num" onclick="press('3')">3</button>
+<button class="btn-op" onclick="press('+')">+</button>
+
+<br>
+
+<button class="btn-num" onclick="press('4')">4</button>
+<button class="btn-num" onclick="press('5')">5</button>
+<button class="btn-num" onclick="press('6')">6</button>
+<button class="btn-op" onclick="press('-')">-</button>
+
+<br>
+
+<button class="btn-num" onclick="press('7')">7</button>
+<button class="btn-num" onclick="press('8')">8</button>
+<button class="btn-num" onclick="press('9')">9</button>
+<button class="btn-op" onclick="press('*')">x</button>
+
+<br>
+
+<button class="btn-clear" onclick="clearDisplay()">C</button>
+<button class="btn-num" onclick="press('0')">0</button>
+<button class="btn-eq" onclick="calculate()">=</button>
+<button class="btn-op" onclick="press('/')">/</button>
+
+</div>
+</div>
+
+<!-- TODO LIST -->
+<div class="card">
+<h3>To-Do List</h3>
+
+<div class="todo">
+<input id="taskInput" placeholder="Enter task">
+<button onclick="addTask()">Add</button>
+
+<ul id="list"></ul>
+</div>
+
+</div>
+
+<!-- PORTFOLIO DEMO -->
+<div class="card">
+<h3>Portfolio Demo</h3>
+<p>This portfolio shows my skills in web development.</p>
+<p>I can build websites with HTML, CSS, and JavaScript.</p>
+</div>
+
+</div>
+</section>
+
+
+
+<script>
+
+// ===== CALCULATOR =====
+let display = document.getElementById("display");
+
+function press(val){
+    display.value += val;
+}
+
+function calculate(){
+    try {
+        display.value = eval(display.value);
+    } catch {
+        display.value = "Error";
+    }
+}
+
+function clearDisplay(){
+    display.value = "";
+}
+
+// ===== TODO LIST =====
+function addTask(){
+    let input = document.getElementById("taskInput");
+    let list = document.getElementById("list");
+
+    if(input.value === "") return;
+
+    let li = document.createElement("li");
+    li.innerHTML = input.value + " <button onclick='this.parentElement.remove()'>X</button>";
+
+    list.appendChild(li);
+    input.value = "";
+}
+<a href="Contact.html" class="btn">Go to Contact Page</a>
+
+</script>
+
+</body>
+</html>

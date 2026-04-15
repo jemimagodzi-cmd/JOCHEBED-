@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: dodgerblue;
+            color: white;
+            padding: 20px;
+            margin: 0;
+        }
+
+        /* NAVBAR */
+        .navbar{
+            background: rgba(0,0,0,0.3);
+            padding: 15px;
+            text-align: center;
+        }
+
+        .navbar a{
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover{
+            text-decoration: underline;
+        }
+
+        h1, h2{
+            text-align: center;
+        }
+
+        .section{
+            background: white;
+            color: black;
+            padding: 15px;
+            margin: 20px;
+            border-radius: 15px;
+        }
+
+        .skill{
+            margin: 10px 0;
+        }
+
+        .bar{
+            height: 10px;
+            background: lightgray;
+            border-radius: 10px;
+        }
+
+        .fill{
+            height: 10px;
+            background: dodgerblue;
+            border-radius: 10px;
+        }
+
+        .timeline{
+            border-left: 3px solid dodgerblue;
+            padding-left: 10px;
+        }
+
+        .item{
+            margin-bottom: 15px;
+        }
+
+        a{
+            color: white;
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-btn{
+            background: white;
+            color: dodgerblue;
+            padding: 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            width: 200px;
+            margin: 20px auto;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR ADDED HERE -->
+<nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<h1>About Me</h1>
+
+<div class="section">
+    <h2>Biography</h2>
+    <p>
+        My name is Jochebed Godzi. I am a passionate student interested in software 
+        development and technology. I enjoy solving problems and building creative 
+        digital solutions while continuously improving my programming skills.
+    </p>
+</div>
+
+<div class="section">
+    <h2>Skills</h2>
+
+    <div class="skill">
+        Below are some of the technical skills I have developed so far. These skills represent my current level of understanding and experience in different areas of web development. I continue to practice and improve these skills through projects, research, and hands-on learning.
+    </div>
+
+    <div class="skill">HTML
+        <div class="bar">
+            <div class="fill" style="width: 80%;"></div>
+        </div>
+    </div>
+
+    <div class="skill">CSS
+        <div class="bar">
+            <div class="fill" style="width: 70%;"></div>
+        </div>
+    </div>
+
+    <div class="skill">JavaScript
+        <div class="bar">
+            <div class="fill" style="width: 60%;"></div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Education & Experience</h2>
+    <p>
+        My educational journey and experience reflect my growth in the field of technology...
+    </p>
+
+    <div class="timeline">
+        <div class="item">
+            <strong>2023 - Present</strong><br>
+            Studying Software Development
+        </div>
+
+        <div class="item">
+            <strong>Projects</strong><br>
+            Built personal portfolio and small web applications
+        </div>
+    </div>
+</div>
+
+<a href="index.html" class="back-btn">⬅ Back to Home</a>
+<a href="projects.html" class="back-btn">View My Projects ➡</a>
+
+</body>
+</html>

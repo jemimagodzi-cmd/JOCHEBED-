@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, dodgerblue, #1e90ff);
+    color: white;
+}
+
+/* NAVBAR */
+.navbar {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    text-align: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+    padding: 40px;
+    text-align: center;
+}
+
+/* FORM */
+form {
+    margin-top: 20px;
+}
+
+form input,
+form textarea {
+    display: block;
+    margin: 10px auto;
+    padding: 12px;
+    width: 300px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+form textarea {
+    height: 120px;
+    resize: none;
+}
+
+button {
+    padding: 12px 25px;
+    background: white;
+    color: dodgerblue;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #f0f0f0;
+}
+
+/* SOCIAL LINKS */
+.social {
+    margin-top: 20px;
+}
+
+.social a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social a:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<!-- CONTACT SECTION -->
+<section class="contact-section">
+
+<h1>Contact Me</h1>
+
+<p>Email: <a href="mailto:h250829j@hit.ac.zw" style="color:white;">h250829j@hit.ac.zw</a></p>
+
+<form>
+    <input type="text" placeholder="Your Name" required minlength="3">
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" required minlength="10"></textarea>
+    <button type="submit">Send Message</button>
+</form>
+
+<div class="social">
+    <a href="#">Facebook</a>
+    <a href="#">LinkedIn</a>
+</div>
+
+</section>
+
+</body>
+</html>
